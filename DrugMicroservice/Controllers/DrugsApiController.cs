@@ -18,10 +18,12 @@ namespace DrugMicroservice.Controllers
     public class DrugsApiController : ControllerBase
     {
         private readonly IDrugService _drugService;
+        readonly log4net.ILog _log4net;
 
         public DrugsApiController(IDrugService drugService)
         {
             _drugService = drugService;
+            _log4net = log4net.LogManager.GetLogger(typeof(DrugsApiController));
         }
 
 
@@ -33,10 +35,13 @@ namespace DrugMicroservice.Controllers
         {
             try
             {
+                _log4net.Info("Displaying All Drugs Available ");
+
                 // checking if drug is available
                 var drug = _drugService.GetAllAvailableDrugs();
                 if (drug == null)
                 {
+                    _log4net.Info("No Drug Available");
                     return NotFound("No Drug Available");
                 }
                 return Ok(drug);
@@ -44,6 +49,7 @@ namespace DrugMicroservice.Controllers
 
             catch(Exception e)
             {
+                _log4net.Error("Error occured from " + nameof(DrugsApiController.GetAllAvailableDrugs) + " Error Message " + e.Message);
                 return BadRequest("Error occured from " + nameof(DrugsApiController.GetAllAvailableDrugs) + " Error Message " + e.Message);
             }
         }
@@ -60,6 +66,8 @@ namespace DrugMicroservice.Controllers
         {
             try
             {
+                _log4net.Info("Searched drug with DrugId "+ drugId);
+
                 // validating drugId
                 if (drugId > 0)
                 {
@@ -68,14 +76,20 @@ namespace DrugMicroservice.Controllers
 
                     // Drug ID(id) entered For Searching.
                     if (drug == null)
+                    {
+
+                        _log4net.Info("Drug with drugId -> " + drugId + " not available.");
                         return NotFound("Drug with specified drugId is not available");
+                    }
                     return Ok(drug);
                 }
+                _log4net.Info("Invalid DrugId " + drugId);
                 return BadRequest();
             }
 
             catch(Exception e)
             {
+                _log4net.Error("Error occured from " + nameof(DrugsApiController.SearchDrugsByID) + " Error Message " + e.Message);
                 return BadRequest("Error occured from " + nameof(DrugsApiController.SearchDrugsByID) + " Error Message " + e.Message);
             }
         }
@@ -92,6 +106,8 @@ namespace DrugMicroservice.Controllers
         {
             try
             {
+                _log4net.Info("Searched drug with DrugName " + drugName);
+
                 // validating drugName - drugName.GetType() != typeof(string)
                 if (drugName.All(Char.IsLetter))
                 {
@@ -101,13 +117,19 @@ namespace DrugMicroservice.Controllers
 
                     // Drug Name(name) entered For Searching.
                     if (drug == null)
+                    {
+
+                        _log4net.Info("Drug with drugName -> " + drugName + " not available.");
                         return NotFound("Drug with specified drugName is not available");
+                    }
                     return Ok(_drugService.SearchDrugsByName(drugName));
                 }
+                _log4net.Info("Invalid DrugName " + drugName);
                 return BadRequest();
             }
             catch(Exception e)
             {
+                _log4net.Error("Error occured from " + nameof(DrugsApiController.SearchDrugsByName) + " Error Message " + e.Message);
                 return BadRequest("Error occured from " + nameof(DrugsApiController.SearchDrugsByName) + " Error Message " + e.Message);
             }
         }
@@ -119,11 +141,13 @@ namespace DrugMicroservice.Controllers
         /// <param name="drug_loc"></param>
         /// <returns></returns>
 
-        [HttpPost("{drugId}/{location}")]
-        public IActionResult GetDispatchableDrugStock([FromRoute] int drugId, string location)
+        [HttpPost]
+        public IActionResult GetDispatchableDrugStock(int drugId, string location)
         {
             try
             {
+                _log4net.Info("Searched drug with DrugId " + drugId + " and Location " + location);
+
                 //Validating drugId and location
                 if (drugId > 0 && (location.All(Char.IsLetter)))
                 {
@@ -133,14 +157,21 @@ namespace DrugMicroservice.Controllers
 
                     // Drug Id(drugId) and Location(location) recieved From other Api's.
                     if (drug == null)
+                    {
+                        _log4net.Info("Drug with drugId -> " + drugId + " and Location -> " + location +" not available.");
                         return NotFound("Drug with specified drugId and location is not available");
+                    }
                     return Ok(drug);
                 }
                 else
+                {
+                    _log4net.Info("Invalid DrugId or location");
                     return BadRequest();
+                }
             }
             catch(Exception e)
             {
+                _log4net.Error("Error occured from " + nameof(DrugsApiController.GetDispatchableDrugStock) + " Error Message " + e.Message);
                 return BadRequest("Error occured from " + nameof(DrugsApiController.GetDispatchableDrugStock) + " Error Message " + e.Message);
             }
         }

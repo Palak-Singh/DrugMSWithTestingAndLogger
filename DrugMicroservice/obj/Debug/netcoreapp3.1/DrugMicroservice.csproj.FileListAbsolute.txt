@@ -44,6 +44,14 @@ C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcorea
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\log4net.config
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\obj\Debug\netcoreapp3.1\DrugMicroservice.csproj.CoreCompileInputs.cache
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\obj\Debug\netcoreapp3.1\DrugMicroservice.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice\obj\Debug\netcoreapp3.1\DrugMicroservice.MvcApplicationPartsAssemblyInfo.cache

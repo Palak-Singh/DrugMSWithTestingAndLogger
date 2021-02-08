@@ -128,3 +128,4 @@ C:\Users\PALAK\source\repos\DrugMicroservice\DrugsApi.Testing\obj\Debug\netcorea
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugsApi.Testing\obj\Debug\netcoreapp3.1\DrugMicroservice.Testing.dll
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugsApi.Testing\obj\Debug\netcoreapp3.1\DrugMicroservice.Testing.pdb
 C:\Users\PALAK\source\repos\DrugMicroservice\DrugsApi.Testing\obj\Debug\netcoreapp3.1\DrugMicroservice.Testing.genruntimeconfig.cache
+C:\Users\PALAK\source\repos\DrugMicroservice\DrugsApi.Testing\bin\Debug\netcoreapp3.1\log4net.config

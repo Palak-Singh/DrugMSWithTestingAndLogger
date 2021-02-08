@@ -1,0 +1,39 @@
+INFO  02:54:11 Application started. Press Ctrl+C to shut down.
+INFO  02:54:11 Hosting environment: Development
+INFO  02:54:11 Content root path: C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice
+INFO  02:54:29 Displaying All Drugs Available 
+INFO  02:54:36 Searched drug with DrugId 1
+INFO  02:54:49 Searched drug with DrugName Disprin
+INFO  10:13:21 Application started. Press Ctrl+C to shut down.
+INFO  10:13:21 Hosting environment: Development
+INFO  10:13:21 Content root path: C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice
+INFO  10:14:07 Displaying All Drugs Available 
+INFO  10:14:14 Searched drug with DrugId 1
+INFO  10:14:19 Searched drug with DrugId 4
+INFO  10:14:19 Drug with drugId -> 4 not available.
+INFO  10:14:28 Searched drug with DrugId -2
+INFO  10:14:28 Invalid DrugId -2
+INFO  10:14:35 Searched drug with DrugName Disprin
+INFO  10:14:41 Searched drug with DrugName Dolo
+INFO  10:14:41 Drug with drugName -> Dolo not available.
+INFO  10:14:47 Searched drug with DrugName kl55
+INFO  10:14:47 Invalid DrugName kl55
+INFO  10:19:57 Application started. Press Ctrl+C to shut down.
+INFO  10:19:57 Hosting environment: Development
+INFO  10:19:57 Content root path: C:\Users\PALAK\source\repos\DrugMicroservice\DrugMicroservice
+INFO  10:20:20 Displaying All Drugs Available 
+INFO  10:20:39 Searched drug with DrugId 3
+INFO  10:20:45 Searched drug with DrugId 10
+INFO  10:20:45 Drug with drugId -> 10 not available.
+INFO  10:21:00 Searched drug with DrugId -5
+INFO  10:21:00 Invalid DrugId -5
+INFO  10:21:21 Searched drug with DrugName Paracetamol
+INFO  10:21:30 Searched drug with DrugName Dolo
+INFO  10:21:30 Drug with drugName -> Dolo not available.
+INFO  10:21:42 Searched drug with DrugName Hello55
+INFO  10:21:42 Invalid DrugName Hello55
+INFO  10:22:02 Searched drug with DrugId 1 and Location Delhi
+INFO  10:22:19 Searched drug with DrugId 5 and Location Nainital
+INFO  10:22:19 Drug with drugId -> 5 and Location -> Nainital not available.
+INFO  10:22:29 Searched drug with DrugId -5 and Location Nainital
+INFO  10:22:29 Invalid DrugId or location
